@@ -1,11 +1,5 @@
 import styled from "styled-components/native";
 
-export const Container = styled.View`
-  flex: 1;
-  background-color: ${({ theme }) => theme.COLORS.GRAY_700};
-  align-items: center;
-  justify-content: center;
-`;
 
 export const Page = styled.View`
   background-color: ${({ theme }) => theme.COLORS.GRAY_700};
@@ -14,3 +8,10 @@ export const Page = styled.View`
   padding: 0 24px;
 `
 
+export const CardRouterPercent = styled.View`
+  background-color: ${({ theme }) => theme.COLORS.GREEN_LIGHT};
+  
+  width: 100%;
+  border-radius: 8;
+  padding: 10;
+`
