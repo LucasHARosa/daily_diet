@@ -1,22 +1,42 @@
 import {Stack} from 'expo-router'
+import {useFonts, NunitoSans_400Regular, NunitoSans_700Bold} from '@expo-google-fonts/nunito-sans';
+import { ThemeProvider } from 'styled-components';
+import theme from '../theme';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default function Layout(){
+  const [fontsLoaded] = useFonts({
+    NunitoSans_400Regular,
+    NunitoSans_700Bold
+  });
   
   return (
-    <Stack
-      screenOptions={{
-        headerStyle: {
-          backgroundColor: '#f4511e',
-        },
-        headerTintColor: '#fff',
-        headerTitleStyle: {
-          fontWeight: 'bold',
-        },
-      }}
-    >
-      <Stack.Screen name="Home/index" options={{title:"Home"}} />
-      
-    </Stack>
+    fontsLoaded ? <RootLayout /> : null
+  )
+}
+
+function RootLayout() {
+  return (
+    <ThemeProvider theme={theme}>
+      <SafeAreaProvider
+        style={{
+          backgroundColor: theme.COLORS.GRAY_700,
+        }}
+      >
+        <Stack
+          screenOptions={{
+            headerStyle:{
+              backgroundColor: theme.COLORS.RED_DARK,
+            
+            }
+          }}
+        >
+
+          <Stack.Screen name="Home/index" options={{title:"Home", headerShown:false}} />
+          <Stack.Screen name="index" options={{title:"index", headerShown:false}} />
+        </Stack>
+      </SafeAreaProvider>
+    </ThemeProvider>
   )
 }
 //rnf to create a new functional component
