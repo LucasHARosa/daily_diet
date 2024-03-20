@@ -12,6 +12,18 @@ export const CardRouterPercent = styled.View`
   background-color: ${({ theme }) => theme.COLORS.GREEN_LIGHT};
   
   width: 100%;
-  border-radius: 8;
-  padding: 10;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+`
+
+export const AddNew = styled.View`
+  flex-direction: column;
+  margin-top: 30px;
+`
+
+export const Text = styled.Text`
+  font-size: ${({ theme }) => theme.FONT_SIZE.LG}px;
+  color: ${({ theme }) => theme.COLORS.GRAY_100};
+  font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
 `
