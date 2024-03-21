@@ -34,6 +34,7 @@ function RootLayout() {
 
           <Stack.Screen name="Home/index" options={{title:"Home", headerShown:false}} />
           <Stack.Screen name="index" options={{title:"index", headerShown:false}} />
+          <Stack.Screen name="Statistic/index" options={{title:"Statistic", headerShown:false}} />
         </Stack>
       </SafeAreaProvider>
     </ThemeProvider>

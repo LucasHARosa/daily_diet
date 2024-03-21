@@ -34,12 +34,16 @@ export default function Home() {
     return acc;
   }, []);
  
-  console.log(mealsByDay)
+  function handleNavigateStatitics() {
+    //navegar para a tela de estatisticas
+    
+
+  }
 
   return (
     <Page>
       <Header />
-      <CardRouterPercent>
+      <CardRouterPercent onPress={handleNavigateStatitics}>
         <TwoTexts texttop={`${percentageInPlan.toFixed(0)}%`} textbottom="das refeições dentro da dieta" />
       </CardRouterPercent>
       <AddNew>

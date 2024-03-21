@@ -8,7 +8,7 @@ export const Page = styled.View`
   padding: 0 24px;
 `
 
-export const CardRouterPercent = styled.View`
+export const CardRouterPercent = styled.TouchableOpacity`
   background-color: ${({ theme }) => theme.COLORS.GREEN_LIGHT};
   
   width: 100%;
