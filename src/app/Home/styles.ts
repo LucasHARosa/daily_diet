@@ -27,3 +27,15 @@ export const Text = styled.Text`
   color: ${({ theme }) => theme.COLORS.GRAY_100};
   font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
 `
+
+export const Day = styled.View`
+  flex-direction:colum;
+  margin-top: 30px;
+
+`
+
+export const TextTitle = styled.Text`
+  font-size: ${({ theme }) => theme.FONT_SIZE.XL}px;
+  color: ${({ theme }) => theme.COLORS.GRAY_100};
+  font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
+`
